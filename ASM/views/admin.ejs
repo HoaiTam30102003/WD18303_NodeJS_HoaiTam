@@ -1,0 +1,102 @@
+<%-include('admin-header')%>
+
+<body>
+<div class="row">
+    <div class="col-md-2 ">
+        <div class="logo"><h1 class="text-center"><span>CLOUD</span><span class="text-white">SHOP</span></h1></div>
+        <hr>
+        <p><i class="bi bi-pie-chart-fill me-2"></i><a  href=""> Quản lý thống kê</a></p>
+        <p><i class="bi bi-tag-fill me-2"></i><a  href="/admin-cate"> Quản lý danh mục</a></p>
+        <p><i class="bi bi-box-seam me-2"></i><a  href="/admin-pro"> Quản lý sản phẩm</a></p>
+        <p><i class="bi bi-people-fill me-2"></i><a  href=""> Quản lý người dùng</a></p>
+        <hr>
+        <div class="logout">
+            <button>Đăng xuất</button>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div class="top">
+            <img src="img/img-admin.png" width="100px">
+            <p>TRANG QUẢN TRỊ WEBSITE CLOUD SHOP</p>
+            <div><span>Admin</span><img width="30px" height="30px" src="https://loremflickr.com/640/480" alt="" class="logoAd"></div>
+        </div>
+        <div class="content">
+            <div class="lb-name ">
+                <label>Danh Sách Sản Phẩm</label>
+                <button class="btn-add" id="openAddPage">Thêm</button>
+            </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Tên sản phẩm</th>
+                    <th scope="col">Hình ảnh</th>
+                    <th scope="col">Giá</th>
+                    <th scope="col">Mô tả</th>
+                    <th scope="col">Tác vụ</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <% for (item of pro){ %>
+                    <tr>
+                        <td><%= item.id %></td>
+                        <td><%= item.name %></td>
+                        <td><img src="<%= item.image %>" width="100px"></td>
+                        <td><%= item.price %>đ</td>
+                        <td><%= item.detail %></td>
+                        <td>
+                            <button type="button" class="openEditPage" data-id="${item.id}">Sửa</button>
+                            <button type="button" class="deletePro" data-id="${item.id}">Xoá</button>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+<!--            <div id="addModal" class="modal">-->
+<!--                &lt;!&ndash; Modal content &ndash;&gt;-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+
+<!--                    <div class="form">-->
+<!--                        <label for="">Tên sản phẩm</label>-->
+<!--                        <br>-->
+<!--                        <input type="text" id="name">-->
+<!--                        <label for="">Hình ảnh</label>-->
+<!--                        <br>-->
+<!--                        <input type="file" id="image">-->
+<!--                        <label for="">Giá</label>-->
+<!--                        <br>-->
+<!--                        <input type="text" id="price">-->
+<!--                        <label for="">Danh mục</label>-->
+<!--                        <br>-->
+<!--                        <select id="category">-->
+<!--                            <option value="1">Nước tẩy trang</option>-->
+<!--                            <option value="2">Dầu tẩy trang</option>-->
+<!--                            <option value="3">Kem chống nắng</option>-->
+<!--                            <option value="4">Sữa rửa mặt</option>-->
+<!--                            <option value="5">Tẩy da chết</option>-->
+<!--                            <option value="6">Kem dưỡng</option>-->
+<!--                            <option value="7">Xịt khoáng</option>-->
+<!--                        </select>-->
+<!--                        <label for="">Mô tả</label>-->
+<!--                        <br>-->
+<!--                        <textarea type="text" id="detail"></textarea>-->
+<!--                        <button id="addPro">Thêm</button>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--            <div id="editModal" class="modal">-->
+<!--                &lt;!&ndash; Modal content &ndash;&gt;-->
+
+
+<!--            </div>-->
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<%-include('admin-footer')%>
+<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+<!--<script type="module" src="../Admin/main.js"></script>-->
+</body>
+</html>
