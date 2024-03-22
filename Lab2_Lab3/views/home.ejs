@@ -39,13 +39,13 @@
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="card mb-4" style="width: 18rem;">
                     <div class="box-img p-3">
-                        <a href="shop/${e.id}">
-                            <img src="images/<% product.imageURL %>"
+                        <a href="/shop/${e.id}">
+                            <img src="images/<%= product.imageURL %>"
                                  class="card-img-top" alt="...">
                         </a>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"><a href="shop/${e.id}"><%= product.title %></a></h5>
+                        <h5 class="card-title"><a href="shop/${e.id}"><%= product.name %></a></h5>
                         <p class="card-text"><%= product.description %></p>
                         <p class="card-text"><%= product.price %></p>
                         <a href="#" class="btn btn-primary">Thêm Vào Giỏ</a>
