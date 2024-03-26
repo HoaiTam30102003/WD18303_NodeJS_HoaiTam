@@ -2,16 +2,14 @@ const Product = require('../../model/product');
 const Category = require('../../model/category');
 
 exports.getShop = (req, res, next) => {
-    Product.getAll(function (data){
-        res.render('client/shop', {
-            pro: data
-        })
-    })
-    Category.getAll(function (data){
-        res.render('client/shop', {
-            cate: data
-        })
-    })
+    Product.getAll(function (products){
+        Category.getAll(function (categories){
+            res.render('client/shop', {
+                pro: products,
+                cate: categories
+            });
+        });
+    });
 }
 
 
