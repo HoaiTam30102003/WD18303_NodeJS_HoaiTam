@@ -32,6 +32,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^3.9.3",
     "node-modules": "^1.0.1",
-    "npm-watch": "^0.11.0"
+    "npm-watch": "^0.11.0",
+    "sequelize": "^6.37.1"
   }
 }
