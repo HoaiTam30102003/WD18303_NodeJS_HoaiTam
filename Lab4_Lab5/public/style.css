@@ -68,6 +68,7 @@ body {
     text-align: center;
 }
 .content{
+    min-height: 540px;
     padding: 10px;
 }
 footer{
@@ -137,6 +138,7 @@ td {
   }
 
   input[type="text"],
+  input[type="number"],
   select,
   textarea{
     width: 100%;
@@ -164,6 +166,17 @@ td {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  #openAddPage {
+      background-color: #ff2121;
+      color: black;
+      font-size: medium;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
   }
 
   button:hover {

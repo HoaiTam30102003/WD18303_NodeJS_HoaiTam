@@ -1,7 +1,7 @@
 const Category = require('../../model/category');
 
 exports.addCategory = (req, res, next) => {
-    res.render('admin/category/add')
+    res.render('admin/category/add-cate')
 }
 
 exports.getCategory = (req, res, next) => {
