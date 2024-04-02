@@ -17,7 +17,11 @@ router.post('/posts', PostController.createPost);// Thêm dữ liệu
 // router.delete('/post/:id', PostController.deletePost);// Xóa
 
 router.get('/products',ProductController.getProduct);
-router.post('/addpro', upload.single('img'),ProductController.addProduct);
+router.post('/products', upload.single('img'),ProductController.addProduct);
+router.get('/products/:id', ProductController.getProductsById);
+router.delete('/products/:id', ProductController.deleteProducts);
+router.put('/products/:id',upload.single('image'), ProductController.updateProducts);
+
 
 router.get('/categories',CategoryController.getCategory);
 router.post('/addcate',CategoryController.addCategory);
