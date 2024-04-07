@@ -1,4 +1,4 @@
-<%-include('admin-header')%>
+<%-include('../include/header')%>
 
 <body>
 <div class="row">
@@ -6,8 +6,8 @@
         <div class="logo"><h1 class="text-center"><span>CLOUD</span><span class="text-white">SHOP</span></h1></div>
         <hr>
         <p><i class="bi bi-pie-chart-fill me-2"></i><a  href=""> Quản lý thống kê</a></p>
-        <p><i class="bi bi-tag-fill me-2"></i><a  href="/admin-cate"> Quản lý danh mục</a></p>
-        <p><i class="bi bi-box-seam me-2"></i><a  href="/admin-pro"> Quản lý sản phẩm</a></p>
+        <p><i class="bi bi-tag-fill me-2"></i><a  href="/admin/categories"> Quản lý danh mục</a></p>
+        <p><i class="bi bi-box-seam me-2"></i><a  href="/admin/products"> Quản lý sản phẩm</a></p>
         <p><i class="bi bi-people-fill me-2"></i><a  href=""> Quản lý người dùng</a></p>
         <hr>
         <div class="logout">
@@ -16,30 +16,34 @@
     </div>
     <div class="col-md-10">
         <div class="top">
-            <img src="img/img-admin.png" width="100px">
+            <img src="../img/img-admin.png" width="100px">
             <p>TRANG QUẢN TRỊ WEBSITE CLOUD SHOP</p>
             <div><span>Admin</span><img width="30px" height="30px" src="https://loremflickr.com/640/480" alt="" class="logoAd"></div>
         </div>
         <div class="content">
             <div class="lb-name ">
-                <label>Danh Sách Loại</label>
-                <button class="btn-add" id="openAddPage">Thêm</button>
+                <label>Danh Sách Sản Phẩm</label>
+                <a href="/admin/addpro"><button class="btn-add" id="openAddPage">Thêm</button></a>
             </div>
             <table class="table">
                 <thead>
                 <tr>
                     <th scope="col">STT</th>
-                    <th scope="col">Tên loại</th>
-
+                    <th scope="col">Tên sản phẩm</th>
+                    <th scope="col">Hình ảnh</th>
+                    <th scope="col">Giá</th>
+                    <th scope="col">Mô tả</th>
                     <th scope="col">Tác vụ</th>
                 </tr>
                 </thead>
                 <tbody>
-                <% for (item of cate){ %>
+                <% for (item of pro){ %>
                     <tr>
                         <td><%= item.id %></td>
                         <td><%= item.name %></td>
-
+                        <td><img src="<%= item.image %>" width="100px"></td>
+                        <td><%= item.price %>đ</td>
+                        <td><%= item.detail %></td>
                         <td>
                             <button type="button" class="openEditPage" data-id="${item.id}">Sửa</button>
                             <button type="button" class="deletePro" data-id="${item.id}">Xoá</button>
@@ -91,7 +95,7 @@
     </div>
 </div>
 <!-- Footer -->
-<%-include('admin-footer')%>
+<%-include('../include/footer')%>
 <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 <!--<script type="module" src="../Admin/main.js"></script>-->
 </body>

@@ -1,4 +1,4 @@
-<%-include('header')%>
+<%-include('./include/header')%>
 
     <!-- Modal -->
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -25,7 +25,7 @@
                 <div class="col-md-6">
                     <div class="block-16">
                         <figure>
-                            <img src="img/img.png" alt="Image placeholder" class="img-fluid rounded">
+                            <img src="../img/img.png" alt="Image placeholder" class="img-fluid rounded">
                             <!-- <a href="https://youtu.be/FQcIolIajlg?si=FztY3k7SobiGltV2" class="play-button popup-vimeo"><span class="ion-md-play"></span></a> -->
 
                         </figure>
@@ -93,15 +93,9 @@
 
 
 
-    <%-include('footer')%>
+    <%-include('./include/footer')%>
 
-    <!-- Start Script -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <!-- End Script -->
+    <%-include('./include/script')%>
 </body>
 
 </html>
