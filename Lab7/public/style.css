@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .row{
+    padding: 0px;
+    display: flex;
+    margin: 0px;
+}
+.logo{
+    padding: 10px;
+    text-align: center;
+    color: #dc3444;
+}
+.text-white{
+    color: white;
+}
+.col-md-2{
+
+    width: 15%;
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+.col-md-2 a{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    line-height: 1.5;
+}
+.col-md-10{
+    
+    width: 85%;
+}
+.col-md-10 .top{
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff818c;
+    color: black;
+}
+.top .logoAd{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 10px;
+
+}
+.top>div{
+    display: flex;
+    align-items: center;
+}
+.col-md-2 button{
+    padding: 10px;
+    background-color: #ff818c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+}
+.logout{
+    text-align: center;
+}
+.content{
+    min-height: 540px;
+    padding: 10px;
+}
+footer{
+    margin: 0px;
+    padding: 10px;
+    background-color: #ff818c;
+    text-align: center;
+    color: white;
+}
+  table {
+    width: 100%;
+    margin: 0px 0;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #1213120f;
+    color: 000;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+td {
+    text-align: center;
+}
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+      border-radius: 10px;
+  }
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+      border-radius: 10px;
+  }
+  #image,#category{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  #hotdeal{
+    padding: 12px 20px;
+    margin: 20px 0;
+  }
+  button {
+    background-color: #ff2121;
+    color: black;
+      font-size: medium;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #openAddPage {
+      background-color: #ff2121;
+      color: black;
+      font-size: medium;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .lb-name {
+      padding-top: 10px;
+      padding-bottom: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 20px 0;
+      font-size: 20px;
+      border-radius: 5px;
+      height: 40px;
+      background-color: #ff818c;
+      display: flex;
+      justify-content: space-between;
+  }
+.lb-name label {
+ margin-top: 15px;
+}
+
+  .btn-add {
+      background-color: #ff2121;
+      padding-bottom: 30px;
+      cursor: pointer;
+  }
